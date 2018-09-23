@@ -3,7 +3,7 @@
     <head>
         <style>
             body {
-                background:  url(https://media.giphy.com/media/ule4vhcY1xEKQ/giphy.gif) no-repeat center center fixed; 
+                background: url(https://media3.giphy.com/media/lJNoBCvQYp7nq/200w.webp) no-repeat center center fixed; 
                 background-size: cover;
                 padding: 10px;
                 font-family: arial;
@@ -19,7 +19,7 @@
     
             /* navigation menu */
             nav {
-                background: rgb(64, 244, 208);
+                animation: change 14s infinite;
                 margin: 0 auto;
                 margin-bottom: 20px;
                 display: flex;
@@ -27,6 +27,16 @@
                 border: 5px grey;
                 border-radius: 25px;
                 border-style: outset;
+            }
+            @keyframes change {
+                0%{background-color: violet;}
+                17%{background-color: red;}
+                34%{background-color: orange;}
+                41%{background-color: yellow;}
+                57%{background-color: green;}
+                74%{background-color: blue;}
+                91%{background-color: indigo;}
+                100%{background-color: violet;}
             }
             nav h1 {
                 display: flex;
@@ -48,11 +58,25 @@
     
             /* main container area beneath menu */
             main {
+                margin-bottom: 100px;
                 background: mistyrose;
                 display: flex;
                 border: 5px solid black;
                 border-radius: 10px;
+                border-style: dashed;
+                animation: rletters 14s infinite;
+                animation: rborder 14s infinite;
             }
+                @keyframes rletters {
+                0%{color: violet;}
+                17%{color: red;}
+                34%{color: orange;}
+                41%{color: yellow;}
+                57%{color: green;}
+                74%{color: blue;}
+                91%{color: indigo;}
+                100%{color: violet;}
+                }    
             .sidebar {
                 margin-right: 25px;
                 padding: 10px;
@@ -61,6 +85,17 @@
                 width: 200px;
                 border:5px solid black;
                 border-radius: 100px;
+                animation: rborder 14s infinite;
+            }
+            @keyframes rborder {
+                0%{border-color: violet;}
+                17%{border-color: red;}
+                34%{border-color: orange;}
+                41%{border-color: yellow;}
+                57%{border-color: green;}
+                74%{border-color: blue;}
+                91%{border-color: indigo;}
+                100%{border-color: violet;}
             }
             .content {
                 flex: 1;
@@ -101,5 +136,10 @@
                 </div>
             </main>
         </div>
+        <audio controls autoplay loop>
+          <source src="http://soundbible.com/grab.php?id=358&type=wav" type="audio/ogg">
+          <source src="http://soundbible.com/grab.php?id=358&type=mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
     </body>
 </html>
