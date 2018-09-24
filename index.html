@@ -3,7 +3,7 @@
     <head>
         <style>
             body {
-                background: url(https://media3.giphy.com/media/lJNoBCvQYp7nq/200w.webp) no-repeat center center fixed; 
+                background: url(https://media3.giphy.com/media/lJNoBCvQYp7nq/200w.webp) no-repeat center center fixed, linear-gradient(to right, #051937, #004D7A, #008793, #00BF72, #A8EB12);
                 background-size: cover;
                 padding: 10px;
                 font-family: arial;
@@ -19,7 +19,8 @@
     
             /* navigation menu */
             nav {
-                animation: change 14s infinite;
+               /* animation: change 14s infinite; */
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_MmuEh2ZJpmzWDuA2AgcWLLu-hqq4LeiDM9C-a5M4pvCnsNzh2m_BcEe:https://img00.deviantart.net/5a71/i/2017/062/e/0/cat_collage_by_danmcmanis-d20klx8.jpg);
                 margin: 0 auto;
                 margin-bottom: 20px;
                 display: flex;
@@ -28,7 +29,7 @@
                 border-radius: 25px;
                 border-style: outset;
             }
-            @keyframes change {
+        /*    @keyframes change {
                 0%{background-color: violet;}
                 17%{background-color: red;}
                 34%{background-color: orange;}
@@ -37,7 +38,7 @@
                 74%{background-color: blue;}
                 91%{background-color: indigo;}
                 100%{background-color: violet;}
-            }
+            } */
             nav h1 {
                 display: flex;
                 align-items: center;
@@ -59,24 +60,15 @@
             /* main container area beneath menu */
             main {
                 margin-bottom: 100px;
-                background: mistyrose;
+                background: darkSlateGrey;
                 display: flex;
                 border: 5px solid black;
                 border-radius: 10px;
                 border-style: dashed;
-                animation: rletters 14s infinite;
                 animation: rborder 14s infinite;
+                font-size:1.25em;
+                color: white;
             }
-                @keyframes rletters {
-                0%{color: violet;}
-                17%{color: red;}
-                34%{color: orange;}
-                41%{color: yellow;}
-                57%{color: green;}
-                74%{color: blue;}
-                91%{color: indigo;}
-                100%{color: violet;}
-                }    
             .sidebar {
                 margin-right: 25px;
                 padding: 10px;
@@ -105,12 +97,12 @@
                 font-size: 1.25em;
             }
         </style>
-       <title>Allen's Amazing Website</title> 
+       <title>Allen's Not So Terrible Website</title> 
     </head>
     <body>
         <div id="all-contents">
             <nav>
-                <h1>Allen's Glorious Website</h1>
+                <h1>Allen's Terrible Website</h1>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
