@@ -80,8 +80,8 @@ var init = function (window) {
             // physikz.updatePosition(circles[4]);
             
             // TODO 6 : Call checkCircleBounds on your circles.
-           //  runner.checkCircleBounds(circles[0]);
-           //  runner.checkCircleBounds(circles[1]);
+            // runner.checkCircleBounds(circles[0]);
+            // runner.checkCircleBounds(circles[1]);
             // runner.checkCircleBounds(circles[2]);
             // runner.checkCircleBounds(circles[3]);
             // runner.checkCircleBounds(circles[4]);
