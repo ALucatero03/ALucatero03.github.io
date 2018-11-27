@@ -18,7 +18,7 @@ var background = function (window) {
 
         // container which will be returned
         var background;
-        
+        var tree;
         // Add any variables that will be used by render AND update here:
         
         // add objects for display inb ackground
@@ -33,16 +33,26 @@ var background = function (window) {
 
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'yellow');
+            var backgroundFill = draw.rect(canvasWidth,ground.y, '#4286f4');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
-            
+            var moon = draw.bitmap('img/moon.png');
+            moon.x = 300;
+            moon.y = 25;
+            moon.scaleX = 1.0;
+            moon.scaleY = 1.0;
+            background.addChild(moon);
             
             // TODO: 5 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             
             
             // TODO 4: Part 1 - Add a tree
+            
+            tree = draw.bitmap('img/tree.png');
+            tree.x = 0;
+            tree.y = 0;
+            background.addChild(tree);
             
         }
         
@@ -55,8 +65,11 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
+            tree.x = tree.x - 1;
             
-            
+            if(tree.x < -200) {
+                tree.x = canvasWidth;
+            }
             // TODO 5: Part 2 - Parallax
             
 
