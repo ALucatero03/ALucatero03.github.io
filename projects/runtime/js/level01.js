@@ -41,14 +41,14 @@ var level01 = function (window) {
         obstacleImage.y = -25;   
         }
         function createBox(x,y) {
-        var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
+        /*var myObstacle = game.createObstacle(hitZoneSize,damageFromObstacle);
         myObstacle.x = x;
         myObstacle.y = y;
         game.addGameItem(myObstacle);
         var obstacleImage = draw.bitmap('img/sawblade.png');
         myObstacle.addChild(obstacleImage);
         obstacleImage.x = -25;
-        obstacleImage.y = -25;  
+        obstacleImage.y = -25;  */
         };
         var enemy =  game.createGameItem('enemy',25);
         var redSquare = draw.rect(50,50,'red');
@@ -58,6 +58,18 @@ var level01 = function (window) {
         enemy.x = 400;
         enemy.y = groundY-50;
         game.addGameItem(enemy);
+        enemy.velocityX = -1;
+        enemy.rotationalVelocity = 10;
+        enemy.onPlayerCollision = function() {
+            console.log('The enemy has hit Halle');
+            game.changeIntegrity(-10);
+            enemy.fadeOut();
+        };
+        enemy.onProjectileCollision = function() {
+            console.log('Halle has hit the enemy');
+            game.increaseScore(100);
+            enemy.fadeOut();
+        };
         
         for (var i = 0; i < levelData.gameItems.length; i++) {
         if (levelData.gameItems[i].type === 'sawblade'){
