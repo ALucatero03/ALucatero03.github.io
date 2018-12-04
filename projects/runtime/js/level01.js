@@ -50,13 +50,15 @@ var level01 = function (window) {
         obstacleImage.x = -25;
         obstacleImage.y = -25;  */
         };
+        
+        function createEnemy(x,y) {
         var enemy =  game.createGameItem('enemy',25);
         var redSquare = draw.rect(50,50,'red');
         redSquare.x = -25;
         redSquare.y = -25;
         enemy.addChild(redSquare);
-        enemy.x = 400;
-        enemy.y = groundY-50;
+        enemy.x = x;
+        enemy.y = y;
         game.addGameItem(enemy);
         enemy.velocityX = -1;
         enemy.rotationalVelocity = 10;
@@ -70,6 +72,10 @@ var level01 = function (window) {
             game.increaseScore(100);
             enemy.fadeOut();
         };
+        }
+        createEnemy(400,groundY-10);
+        createEnemy(800,groundY-100);
+        createEnemy(1200,groundY-50);
         
         for (var i = 0; i < levelData.gameItems.length; i++) {
         if (levelData.gameItems[i].type === 'sawblade'){
