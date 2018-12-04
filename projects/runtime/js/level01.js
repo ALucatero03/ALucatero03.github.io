@@ -35,7 +35,7 @@ var level01 = function (window) {
         myObstacle.x = x;
         myObstacle.y = y;
         game.addGameItem(myObstacle);
-        var obstacleImage = draw.bitmap('img/sawblade.png');
+        var obstacleImage = draw.bitmap('img/knuckles.png');
         myObstacle.addChild(obstacleImage);
         obstacleImage.x = -25;
         obstacleImage.y = -25;   
@@ -74,8 +74,27 @@ var level01 = function (window) {
         };
         }
         createEnemy(400,groundY-10);
-        createEnemy(800,groundY-100);
+        createEnemy(800,groundY-75);
         createEnemy(1200,groundY-50);
+        
+        function createReward(x,y) {
+        var enemy =  game.createGameItem('enemy',25);
+        var redSquare = draw.rect(50,50,'blue');
+        redSquare.x = -25;
+        redSquare.y = -25;
+        enemy.addChild(redSquare);
+        enemy.x = x;
+        enemy.y = y;
+        game.addGameItem(enemy);
+        enemy.velocityX = -1;
+        enemy.rotationalVelocity = 5;
+        enemy.onPlayerCollision = function() {
+            console.log('Halle has collected the reward');
+            game.increaseScore(100);
+            enemy.fadeOut();
+        };
+        }
+        createReward(500,groundY-20);
         
         for (var i = 0; i < levelData.gameItems.length; i++) {
         if (levelData.gameItems[i].type === 'sawblade'){

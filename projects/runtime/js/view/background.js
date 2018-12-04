@@ -38,11 +38,11 @@ var background = function (window) {
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
-            var moon = draw.bitmap('img/moon.png');
-            moon.x = 300;
-            moon.y = 25;
-            moon.scaleX = 1.0;
-            moon.scaleY = 1.0;
+            var moon = draw.bitmap('img/meme-face.png');
+            moon.x = 800;
+            moon.y = 1;
+            moon.scaleX = .50;
+            moon.scaleY = .50;
             background.addChild(moon);
             
             // TODO: 5 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
@@ -58,9 +58,11 @@ var background = function (window) {
             
             // TODO 4: Part 1 - Add a tree
             
-            tree = draw.bitmap('img/tree.png');
+            tree = draw.bitmap('img/nyan-cat.png');
             tree.x = 0;
-            tree.y = 0;
+            tree.y = 50;
+            tree.scaleX = .5;
+            tree.scaleY = .5;
             background.addChild(tree);
             
         }
