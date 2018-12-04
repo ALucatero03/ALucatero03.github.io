@@ -50,8 +50,16 @@ var level01 = function (window) {
         obstacleImage.x = -25;
         obstacleImage.y = -25;  
         };
+        var enemy =  game.createGameItem('enemy',25);
+        var redSquare = draw.rect(50,50,'red');
+        redSquare.x = -25;
+        redSquare.y = -25;
+        enemy.addChild(redSquare);
+        enemy.x = 400;
+        enemy.y = groundY-50;
+        game.addGameItem(enemy);
+        
         for (var i = 0; i < levelData.gameItems.length; i++) {
-
         if (levelData.gameItems[i].type === 'sawblade'){
         createSawBlade(levelData.gameItems[i].x, levelData.gameItems[i].y);
         } else if(levelData.gameItems[i].type === 'box'){
